@@ -1,0 +1,33 @@
+<h1 >Feedback Form:</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label class="prelabel" for="name">Name: </label>
+    <input class="inpbox" placeholder='Enter Your Name' id="name"  formControlName="name"><br>
+
+    <label class="prelabel"for="email">Email: </label>
+    <input class="inpbox" placeholder='Enter your Email' id="email" type="email"  formControlName="email"><br>
+
+    <label class="prelabel">Feedback:</label>
+    <br>
+    <div class="radiofield">
+        <input type="radio" id="great"  formControlName="feedback" value="Great">
+        <label for="great">Great</label><br>
+    
+        <input type="radio" id="okay" formControlName="feedback"  value="Okay" >
+        <label for="okay">Okay</label><br>
+    
+        <input type="radio" id="notGood" formControlName="feedback"  value="Not Good">
+        <label for="notGood">Not Good</label><br>
+
+    </div>
+    <label class="prelabel"for="commentsField">Comments:</label><br>
+    <textarea id="commentsField" placeholder='Type Comments' rows=8 cols=28 formControlName="comment"></textarea>
+    <br><br><br>
+    <input class="subBtn"type="submit" value="Submit Form">
+</form>
+
+<!-- <button class="subBtn"(click)="Def2()">Set Default</button> -->
+
+<!-- the name of current form is {{form.value.name}} <br>
+the feedbackof the current form is {{form.value.feedback}} -->
+<br>
+
